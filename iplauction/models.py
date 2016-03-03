@@ -3,6 +3,17 @@ from __future__ import unicode_literals
 from django.db import models
 
 
+class Team(models.Model):
+    team_id = models.IntegerField(primary_key=True)
+    team_name = models.CharField(max_length=20)
+    budget = models.FloatField(default=200000000)
+
+    def __str__(self):
+        return self.team_name
+
+    def budget_return(self):
+        return self.budget
+
 
 class Player(models.Model):
     player_id = models.IntegerField(primary_key=True)
@@ -12,11 +23,7 @@ class Player(models.Model):
     base_price = models.FloatField(default=100000)
     xp = models.IntegerField(default=None)
     sold = models.BooleanField(default=False)
-    sold_to = models.OneToOneField(Team)
+    team = models.ForeignKey(Team, null=True, blank=True)
 
-
-class Team(models.Model):
-    team_id = models.IntegerField(primary_key=True)
-    team_name = models.CharField(max_length=20)
-    budget = models.FloatField(default=200000000)
-    player_list = models.ForeignKey(Player)
+    def __str__(self):
+        return self.player_name
