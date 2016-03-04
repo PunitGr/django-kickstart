@@ -23,7 +23,7 @@ class Player(models.Model):
     base_price = models.FloatField(default=100000)
     xp = models.IntegerField(default=None)
     sold = models.BooleanField(default=False)
-    team = models.ForeignKey(Team, null=True, blank=True)
+    team = models.ForeignKey(Team, null=True, blank=True, related_name='players')
 
     def __str__(self):
         return self.player_name
