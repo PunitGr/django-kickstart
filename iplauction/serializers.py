@@ -12,3 +12,11 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = ('team_id', 'team_name', 'budget')
+
+
+class TeamDataSerializer(serializers.HyperlinkedModelSerializer):
+    players = PlayerSerializer(many = True)
+
+    class Meta:
+        model = Team
+        fields = ('team_id', 'team_name', 'budget', 'players')

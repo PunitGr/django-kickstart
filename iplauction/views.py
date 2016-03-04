@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
-from iplauction.serializers import PlayerSerializer, TeamSerializer
+from iplauction.serializers import PlayerSerializer, TeamSerializer, TeamDataSerializer
 
 from .models import Player, Team
 
@@ -32,3 +32,9 @@ def player_list(request):
     serializer = PlayerSerializer(player, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET', ])
+def team_details(request, t_id):
+    queryset = Team.objects.filter(team_id=t_id)
+    serializer = TeamDataSerializer(queryset, many=True)
+    return Response(serializer.data)
