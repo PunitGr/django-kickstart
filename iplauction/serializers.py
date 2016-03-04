@@ -1,0 +1,14 @@
+from rest_framework import serializers
+from .models import Team, Player
+
+
+class TeamSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Team
+        fields = ('team_id', 'team_name', 'budget')
+
+
+class PlayerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Player
+        fields = ('player_id', 'player_name', 'category', 'country', 'base_price', 'xp', 'sold', 'team')
