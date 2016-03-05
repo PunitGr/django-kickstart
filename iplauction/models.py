@@ -51,8 +51,8 @@ class Player(models.Model):
                     break
                 temp_slug = "%s-%d" % (self.slug, x)
                 x += 1
-            self.slug = temp_slug
-            super(Player, self).save(*args, **kwargs)
+            self.slug = temp_slug      
+        super(Player, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.player_name
