@@ -2,20 +2,20 @@
 <html>
 <head>
 	<title>Player page</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/player.css" />
-	<link rel="stylesheet" href="../static/css/font.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/player.css" />
+	<link rel="stylesheet" href="/static/css/font.css">
 </head>
 <body>
-	<div class="left_screen"></div>   
+	<div class="left_screen" style="background-image: url(/static/img/{{player.player_id}}.jpg)"></div>
 	<div class="right_screen">
-		<b> 
+		<b>
 		    <span class="mini-para">
-				<h1>John Doe</h1>
-		    	<p class="attribute1">Country</p>
-				<p class="attribute2">Category</p>
-				<p class="attribute1">Base Price</p>
-				<p class="attribute2">XP</p>
-
+				<h1>{{ player.player_name }}</h1>
+		    	<p class="attribute1">Country - {{player.country}}</p>
+				<p class="attribute2">Category -{{player.category}}</p>
+				<p class="attribute1">Base Price - ${{player.base_price}}</p>
+				<p class="attribute2">XP - {{player.xp}}</p>
+				<p class="attribute1">Team - {{player.team}}</p>
 			</span>
 		</b>
 	</div>

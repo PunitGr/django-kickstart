@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from iplauction import views
 
 urlpatterns = [
     url(r'^api/', include('iplauction.urls', namespace="iplauction")),
     url(r'^admin/', admin.site.urls),
+    url(r'^player/(?P<slug>[a-zA-Z0-9\-]+)/$', views.player_profile),
+    url(r'^team/(?P<slug>[a-zA-Z0-9\-]+)/$', views.team_details),
 ]

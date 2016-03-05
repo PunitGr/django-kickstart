@@ -15,8 +15,7 @@ html, body {
 	background-image: url(../img/John_Doe.jpg);
 	background-size: cover;
 	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	
+	background-repeat: no-repeat;	
 }
 
 .right_screen {
@@ -28,10 +27,8 @@ html, body {
 	background-image: url(../img/masthead.png);
 	background-color: #283593;
 	background-position: 50% 50%;
-
-
-
 }
+
 h1 {
 	color: #fff;
 	text-align: center;
@@ -44,27 +41,21 @@ p {
 	color: #fff;
 	padding:30px;
 	margin: 0px;
-
 }
 
 p:nth-child(1) {
 	margin-top:170px;
-
 }
 
 p:nth-child(odd) {
 	background-color: #9FA8DA;
-
 }
 
 p:nth-child(even) {
 	background-color: #7986CB;
-	
 }
 
 .mini-para {
 	position: relative;
 	padding: 100px 0px 50px 0px;
-
 }
-
