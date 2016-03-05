@@ -12,7 +12,7 @@ html, body {
 	position: relative;
 	width: 50%;
 	min-height: 100%;
-	background-image: url(/home/isha/Contrivance/iplauction/static/img/John_Doe.jpg);
+	background-image: url(../img/John_Doe.jpg);
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -25,7 +25,7 @@ html, body {
 	float: right;
 	width: 50%;
 	height: 100%;
-	background-image: url(/home/isha/Contrivance/iplauction/static/img/masthead.png);
+	background-image: url(../img/masthead.png);
 	background-color: #283593;
 	background-position: 50% 50%;
 
