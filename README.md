@@ -1,1 +1,2 @@
-# Contrivance
+#django-kickstart
+first project with django
