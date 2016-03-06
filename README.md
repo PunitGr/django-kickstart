@@ -1,2 +1,2 @@
 #django-kickstart
-first project with django
+First project with django
