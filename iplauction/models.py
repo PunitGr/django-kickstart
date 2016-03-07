@@ -21,7 +21,7 @@ class Team(models.Model):
                 temp_slug = "%s-%d" % (self.slug, x)
                 x += 1
             self.slug = temp_slug
-            super(Team, self).save(*args, **kwargs)
+        super(Team, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.team_name
